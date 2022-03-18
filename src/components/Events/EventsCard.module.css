@@ -1,0 +1,15 @@
+.eventsCard {
+  width: 25%;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-image: linear-gradient(45deg, #1a8fff 0%, #53cbf1 40%);
+  background-color: #53cbf1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+
+  overflow-y: scroll;
+  max-height: 33rem;
+}

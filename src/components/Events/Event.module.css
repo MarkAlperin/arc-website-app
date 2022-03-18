@@ -1,0 +1,23 @@
+.event {
+  margin: .5rem;
+  padding: .5rem;
+  background-color: #c4ecf8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  text-align: center;
+
+}
+.event:hover{
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.event h2 {
+  font-size: .9rem;
+  color: black;
+}
+
+.event p {
+  font-size: .9rem;
+  color: black;
+}

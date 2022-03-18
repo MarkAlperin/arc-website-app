@@ -1,0 +1,8 @@
+.span {
+  display: flex;
+  justify-content: left;
+}
+.picker {
+  margin-right: 1rem;
+  width: fit-content;
+}
