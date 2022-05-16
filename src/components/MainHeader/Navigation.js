@@ -37,9 +37,9 @@ const Navigation = () => {
               <p className={classes.p} onClick={userClickHandler}>User</p>
             </li>
           )}
-          {ctx.isAdmin && (
+          {ctx.isLoggedIn && (
             <li>
-              <p className={classes.p} onClick={adminClickHandler}>Admin</p>
+              <p className={classes.p} onClick={adminClickHandler}>Make Event</p>
             </li>
           )}
           {!ctx.isLoggedIn && (
