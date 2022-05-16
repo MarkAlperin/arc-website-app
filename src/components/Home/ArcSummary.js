@@ -6,7 +6,7 @@ import classes from "./ArcSummary.module.css";
 const MealsSummary = (props) => {
   return (
     <section className={classes.summary}>
-      <h2>This is a prototype that I made to practice using React.js </h2>
+      <h2>This is a practice website made with React.js </h2>
       <p>
         Feel free to click around on the calendar or events
       </p>
