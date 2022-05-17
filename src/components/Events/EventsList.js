@@ -1,8 +1,10 @@
 import React, { useState, useContext, useCallback, useEffect } from "react";
+import styled from 'styled-components';
 
 import classes from "./EventsList.module.css";
 import Event from "./Event";
 import AuthContext from "../../context/auth-context";
+import Button from "../UI/Button/Button.js";
 import format from "date-fns/format";
 
 const EventsList = (props) => {
@@ -21,7 +23,7 @@ const EventsList = (props) => {
       );
 
       if (!response.ok) {
-        throw new Error("Something went Wront!");
+        throw new Error("Something went Wrong!");
       }
       const data = await response.json();
       const loadedEvents = [];
@@ -56,21 +58,24 @@ const EventsList = (props) => {
     (ctx.specificEvents.length > 0 && !ctx.eventsListView)
   ) {
     content = (
-      <ul className={classes["events-list"]}>
-        {(ctx.eventsListView ? events : ctx.specificEvents).map((event) => {
-          return (
-            <Event
-              key={event.id}
-              description={event.description}
-              title={event.title}
-              date={event.date}
-              startTime={event.startTime}
-              endTime={event.endTime}
-              calendarTitle={event.calendarTitle}
-            />
-          );
-        })}
-      </ul>
+      <StyledDiv>
+        {!ctx.eventsListView && <Button onClick={ctx.eventsListViewHandler}>List View</Button>}
+        <ul className={classes["events-list"]}>
+          {(ctx.eventsListView ? events : ctx.specificEvents).map((event) => {
+            return (
+              <Event
+                key={event.id}
+                description={event.description}
+                title={event.title}
+                date={event.date}
+                startTime={event.startTime}
+                endTime={event.endTime}
+                calendarTitle={event.calendarTitle}
+              />
+            );
+          })}
+        </ul>
+      </StyledDiv>
     );
   }
 
@@ -86,3 +91,10 @@ const EventsList = (props) => {
 };
 
 export default EventsList;
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7px;
+`;
