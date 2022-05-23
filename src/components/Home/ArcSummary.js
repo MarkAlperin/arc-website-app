@@ -6,12 +6,12 @@ import classes from "./ArcSummary.module.css";
 const MealsSummary = (props) => {
   return (
     <section className={classes.summary}>
-      <h2>A Club For Competetive Marksmen and Their Families </h2>
+      <h2>This is a practice website made with React.js </h2>
       <p>
-        I like having coffee with my Mom!
+        Feel free to click around on the calendar or events
       </p>
       <p>
-        These are a bunch of words used to describe the range and facilites.
+        If you would like to make an event, first login (any email and password will do).
       </p>
       <Button onClick={props.onClick}>Close</Button>
     </section>
