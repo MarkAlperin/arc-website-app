@@ -4,4 +4,4 @@
 
 An event calendar app for a local marksmanship organization. It  
 
-![image](/imnages/arc.png)
+![image](/images/arc.png)
